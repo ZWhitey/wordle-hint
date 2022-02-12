@@ -15,7 +15,6 @@ let hints = [];
 function update() {
   getCurrentBoard();
   hints = getHint();
-  console.log(candidates,notExitsChar, hints);
   printHint();
 }
 
@@ -52,7 +51,6 @@ function getHint() {
   remains = remains.filter((word) => {
     return currectState.every((letter, index) => {
       if (letter) {
-        console.log(word, letter, word[index], word[index] === letter);
         return word[index] === letter;
       }
       return true;
